@@ -1,0 +1,395 @@
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/*Generalized*/
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+.text-big{
+    font-size: 2rem;
+    color:var(--white);
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.text-small{
+    font-size:1rem;
+    margin-bottom:0.3rem;
+}
+
+.text-medium{
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom:0.8rem;
+}
+
+.section-padding{
+    padding:2rem;
+}
+.btn{
+    display:inline-block;
+    padding:0.8rem 2rem;
+    border: 0.2rem solid var(--black);
+    border-radius:2rem;
+    text-decoration: none;
+    color:var(--black);
+    margin-top: 2rem;
+}
+.bold{
+    font-weight:500;
+}
+
+.highlight{
+    color:var(--yellow) !important;
+}
+
+.width-full{
+    width:100%;
+}
+
+.center{
+    text-align: center;
+}
+
+/*Flex*/
+.flex{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+
+/*Colors*/
+
+:root{
+    --grey:#8F8986;
+    --white:#FFFFFF;
+    --black:#000000;
+    --yellow:#ECAF4E;
+    --orange:#FC683E;
+    --skin:#F5E3D7;
+}
+
+/*Container*/
+.container{
+    max-width: 1800px;
+    width:100%;
+    margin:0 auto;
+    padding:0 32px;
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+/*home Section*/
+
+.home{
+    background-image: url(./media/home-img.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column: span 2;
+}
+/*Header*/
+
+.hero{
+    grid-column: span 2;
+    background-color: var(--skin);
+    background-position: center;
+    color: var(--grey);
+}
+
+.nav-list{
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+}
+
+.nav-list li{
+    margin:1rem 1rem;
+}
+
+.nav-list a{
+    text-decoration: none;
+    color:var(--grey);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+/*Hero*/
+
+
+.hero-main{
+    margin: 10rem auto;
+}
+
+.hero-title{
+    font-weight: 300;
+}
+
+.hero-text{
+    color:var(--black);
+    font-weight: 300;
+}
+
+
+/*Auctor*/
+.auctor{
+    grid-column: span 2;   
+}
+.auctor .text-big{
+    color:var(--black);
+}
+
+.auctor .text-small{
+    color:var(--grey);
+}
+
+
+
+.skill-photo{
+    background-image: url(./media/about-img.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*Skill*/
+
+.skill{
+    background-color: var(--yellow);
+}
+
+.skill .text-small{
+    color: var(--white);
+}
+
+/*Services*/
+
+.service-icon{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.design{
+    background-color: var(--yellow);
+    color:var(--white);
+}
+
+.strategy{
+    background-color:var(--orange);
+    color:var(--white);
+}
+
+.app{
+    background-color: var(--black);
+    color:var(--white);
+}
+
+.coding{
+    background-color: var(--white);
+    color:var(--black)
+}
+
+/*Experience*/
+
+.exp-photo{
+    grid-column: span 2;
+    background-image: url(./media/experience-img.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+
+}
+
+.exp{
+    grid-column: span 2;
+    background-color: var(--orange);
+    color:var(--white)
+}
+
+
+
+.exp small{
+    color:var(--black);
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+
+.row{
+    margin-top: 2.5rem;
+}
+
+.col1{
+    flex: 0 1 15%;
+}
+
+.col2{
+    flex: 0 1 75%;
+}
+
+
+/*Education*/
+
+.education{
+    grid-column: span 2;
+    background-color: var(--yellow);
+    color:var(--white);
+}
+
+.education small{
+    color:var(--black);
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+.education-photo{
+    grid-column: span 2;
+    background-image: url(./media/education-img.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/*Enquiry*/
+form{
+    margin-top: 2rem;
+}
+.enquiry{
+    grid-column: span 2;
+    background-color: var(--orange);
+}
+
+input[type],textarea{
+    display:block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding:0.5rem;
+    background-color: var(--orange);
+    border: none;
+    border-bottom: 1px solid var(--yellow);
+}
+
+input::placeholder{
+    color:var(--white);
+}
+
+textarea::placeholder{
+    color: var(--white);
+}
+
+form button{
+    padding:0.5rem 6rem;
+    border: none;
+    border-radius: 15px;
+}
+
+
+
+/*Contact*/
+.contact{
+    background-color: var(--black);
+    color:var(--white)
+}
+.contact .text-medium{
+    margin: 2rem 0;
+}
+.contact-photo{
+    background-image: url(./media/contact-img.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*Map*/
+
+.map{
+    grid-column: span 4;
+    background-color: var(--orange);
+    text-align: center;
+}
+
+.map iframe{
+    box-shadow: 2px 2px 20px var(--black);
+}
+
+
+/*Media Queries*/
+
+@media screen and (max-width:750px) {
+    .home,.education-photo,.skill-photo,.contact-photo{
+        grid-column: 1 / -1;
+        height:500px;
+    }
+    .hero,.auctor,.skill,.design,.strategy,.app,.coding,.exp-photo,.exp,.education,.enquiry,.contact,.map{
+        grid-column: 1 / -1;
+    }
+}
+
+
+
